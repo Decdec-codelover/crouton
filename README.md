@@ -6,9 +6,9 @@ Chromium OS-centric chroot generator. Ubuntu, Debian, and Kali are supported
 one distro) EOL'd Chroot Environment" doesn't acronymize as well (crodupodece is
 admittedly pretty fun to say, though).
 
-### 🪦 crouton is now end-of-life 🪦
+### 🪦 crouton is now end-of-life except this crouton 🪦
 
-All good things must come to an end, and considering
+All good things must come to an end, and considering for the other crouton
  * Chromium OS's introduction of increasingly strict shell safeguards,
  * the [change in cras's build tools](https://github.com/dnschneid/crouton/issues/4958),
  * the [removal of manifest v2 extensions](https://github.com/dnschneid/crouton/pull/5094),
@@ -22,7 +22,7 @@ swap all the lettuce out for onion rings? Point is, it's time to stop mixing
 dressings. Unless it's ranch, I guess, since that goes with just about anything.
 But this is crouton, not some Ready-for-Android Native Chroot Host, alas.
 
-Anyway, this means that:
+Anyway, this means that for the other crouton:
  * The repo is now locked, and no further changes will be considered.
  * Eventually someone will want the latest Ubuntu added to the release list. See
    [this commit](https://github.com/dnschneid/crouton/commit/6d80f57b91c39d10b29fde861aac5a2b5b9b3910)
