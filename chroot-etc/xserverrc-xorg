@@ -10,7 +10,7 @@ XARGS='-nolisten tcp'
 if [ -f /etc/crouton/xserverrc-local ]; then
     . /etc/crouton/xserverrc-local
 fi
-
+DELAY="10"
 X=/usr/bin/X
 
 # Handle Freon systems
@@ -20,9 +20,9 @@ if [ ! -f "/sys/class/tty/tty0/active" ]; then
     while [ -n "$ppid" -a "$ppid" -ne 1 ]; do
         ppid="`ps -p "$ppid" -o 'ppid=' 2>/dev/null | sed 's/ //g'`"
         if ps -p "$ppid" -o 'comm=' | grep -q '^frecon$'; then
-            echo 'Xorg X11 servers cannot be launched from Frecon.' 1>&2
-            echo 'Return to Chromium OS and use crosh to launch X.' 1>&2
-            exit 2
+            echo 'detected launching from frecon, delaying 10 sec.' 1>&2
+            echo 'Return to Chromium OS before ${DELAY} sec' 1>&2
+            #exit 2
         fi
     done
     # Prepare lock file
