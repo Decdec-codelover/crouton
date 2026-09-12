@@ -1,0 +1,44 @@
+name: 🙋 Support Request
+description: File a request for help or ask a question.
+title: "[SUPPORT]: "
+labels: ["help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for asking for help! Please fill out the form below.
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Information
+      description: How can we best reach you if we need quick clarification?
+      placeholder: ex. email@example.com or Discord handle
+    validations:
+      required: true
+  - type: textarea
+    id: what-is-wrong
+    attributes:
+      label: What are you trying to achieve?
+      description: Clear outline of your goal and where you are getting stuck.
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of the project are you running?
+      options:
+        - v2.0 (Latest)
+        - v1.5 (Legacy)
+        - Running from source/main branch
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Troubleshooting Checklist
+      options:
+        - label: I have checked the existing documentation and FAQs.
+          required: true
+        - label: I have cleared my cache and restarted my environment.
+          required: false
