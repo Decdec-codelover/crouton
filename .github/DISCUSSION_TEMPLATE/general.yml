@@ -1,0 +1,38 @@
+name: 💬 Community Discussion
+description: Post a new topic or question to our community forum.
+title: "[Discussion]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📜 Community Terms & Guidelines
+        By posting a discussion in this repository, you explicitly agree to follow our code of conduct, GitHub's universal platform policies, and platform behavior guidelines:
+        
+        1. **Be Respectful:** Harassment, hate speech, and toxic behavior will result in an immediate block.
+        2. **Search First:** Ensure your discussion topic or question hasn't already been addressed in prior posts.
+        3. **No Spam:** Do not post advertisements, duplicate messages, or irrelevant links.
+        4. **Follow Platform Rules:** You must abide strictly by the universal [GitHub Terms of Service](https://github.com).
+        5. **Abide by Community Standards:** You must respect and follow the global [GitHub Community Guidelines](https://docs.github.com/en/site-policy/github-terms/github-community-guidelines) to maintain an open, welcoming, and empathetic environment.
+        
+        *Failure to follow these guidelines will result in your post being deleted by the repository administrators.*
+
+  - type: textarea
+    id: discussion-body
+    attributes:
+      label: What would you like to discuss?
+      description: Provide a detailed overview of your topic or question.
+      placeholder: Type your post content here...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms-agreement
+    attributes:
+      label: Legal & Platform Agreements
+      options:
+        - label: I have read the project guidelines listed above and I agree to follow them.
+          required: true
+        - label: I agree to comply fully with the global GitHub Terms of Service.
+          required: true
+        - label: I agree to abide by the global GitHub Community Guidelines.
+          required: true
