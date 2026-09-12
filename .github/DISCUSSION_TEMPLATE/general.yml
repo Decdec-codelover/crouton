@@ -1,6 +1,3 @@
-configuration:
-  name: 💬 Community Discussion
-  description: Post a new topic or question to our community forum.
 title: "[Discussion]: "
 body:
   - type: markdown
