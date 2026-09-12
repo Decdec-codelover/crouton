@@ -10,7 +10,7 @@ XARGS='-nolisten tcp'
 if [ -f /etc/crouton/xserverrc-local ]; then
     . /etc/crouton/xserverrc-local
 fi
-DELAY="10"
+DELAY=10
 X=/usr/bin/X
 
 # Handle Freon systems
@@ -23,6 +23,7 @@ if [ ! -f "/sys/class/tty/tty0/active" ]; then
             echo 'detected launching from frecon, delaying 10 sec.' 1>&2
             echo 'Return to Chromium OS before ${DELAY} sec' 1>&2
             #exit 2
+            sleep ${DELAY}
         fi
     done
     # Prepare lock file
